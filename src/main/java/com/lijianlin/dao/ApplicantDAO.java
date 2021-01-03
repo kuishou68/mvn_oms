@@ -2,6 +2,7 @@ package com.lijianlin.dao;
 
 import com.lijianlin.entity.CustomerInfoBO;
 import com.lijianlin.entity.UserInfoBO;
+import com.lijianlin.servlet.User;
 import com.lijianlin.util.DBUtil;
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
@@ -14,6 +15,49 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ApplicantDAO extends HttpServlet {
+
+    public static UserInfoBO modifyUserLogin(String email, String password) {
+        Connection conn = DBUtil.getConnection();
+        PreparedStatement pstmt = null;//防止sql注入
+        String sql = "select * from sys_user where email = ? and password = ?";
+        UserInfoBO user = null;
+        ResultSet resultSet = null;
+        try {
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,email);
+            pstmt.setString(2,password);
+            resultSet = pstmt.executeQuery();
+            if (resultSet.next()){
+                user = new UserInfoBO();
+                user.setUser_id(resultSet.getInt("user_id"));
+                user.setUser_name(resultSet.getString("user_name"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtil.closeJDBC(resultSet, pstmt, conn);
+        }
+        return user;
+    }
+
+    public static String selectMeName(int parseInt) {
+        String username = "未查询到";
+        Connection conn = DBUtil.getConnection();
+        PreparedStatement pstmt = null;//防止sql注入
+        ResultSet rs = null;//查询结果返回对象
+        String sql = "select nick_name from sys_user where user_id= ?";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1,parseInt);
+            rs = pstmt.executeQuery();
+            if (rs.next()){
+                username = rs.getString("nick_name");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return username;
+    }
 
     //注册的业务处理
     // 1.验证email是否被注册
@@ -344,4 +388,6 @@ public class ApplicantDAO extends HttpServlet {
         }
         return isSousess;
     }
+
+
 }

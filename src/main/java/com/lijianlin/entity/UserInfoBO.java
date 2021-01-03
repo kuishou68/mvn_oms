@@ -18,6 +18,8 @@ public class UserInfoBO {
         this.sex = sex;
     }
 
+    public UserInfoBO(){}
+
     public UserInfoBO(Integer user_id, String user_name, String user_type, String email, String phoneNumber, String status, String create_time, String sex) {
         this.user_id = user_id;
         this.user_name = user_name;
@@ -84,4 +86,18 @@ public class UserInfoBO {
         this.create_time = create_time;
     }
 
+
+    @Override
+    public String toString() {
+        return "UserInfoBO{" +
+                "user_id=" + user_id +
+                ", user_name='" + user_name + '\'' +
+                ", user_type='" + user_type + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", status='" + status + '\'' +
+                ", create_time='" + create_time + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
+    }
 }

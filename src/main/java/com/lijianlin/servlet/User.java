@@ -21,9 +21,21 @@ public class User extends HttpServlet {
     }
     //duPost请求方式
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        if (request.getSession().getAttribute("userLogin")==null){
+            String email = request.getParameter("email").trim();
+            String password = request.getParameter("password").trim();
+            UserInfoBO user = ApplicantDAO.modifyUserLogin(email,password);
+            if (user==null){
+
+                request.getRequestDispatcher("login.jsp").forward(request,response);
+            }
+            request.getSession().setAttribute("userLogin",user);
+        }
+
         ApplicantDAO dao = new ApplicantDAO();
         List<UserInfoBO> userInfoBOS = dao.UserSelect();
         request.setAttribute("users",userInfoBOS);
-        request.getRequestDispatcher("user.jsp").forward(request,response);
+        request.getRequestDispatcher("user.jsp").forward(request,response);//请求转发
     }
 }

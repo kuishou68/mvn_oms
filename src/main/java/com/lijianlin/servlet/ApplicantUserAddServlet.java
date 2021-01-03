@@ -35,7 +35,7 @@ public class ApplicantUserAddServlet extends HttpServlet {
         boolean flag = dao.isExistEail(email);
         if(flag){
             //用户邮箱已存在，进行错误提示
-            out.print("<script type='text/javaascript'>");
+            out.print("<script type='text/javascript'>");
             out.print("alert('用户已添加，请重新输入！');");
             out.print("</script>");
         }else{
