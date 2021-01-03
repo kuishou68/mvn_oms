@@ -68,14 +68,10 @@
 
 
                 <li>
-                    <a href="index.html#"><i class="fa fa-edit"></i> <span class="nav-label">订单管理</span><span
+                    <a href="Customer"><i class="fa fa-edit"></i> <span class="nav-label">订单管理</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="index.html">交易订单</a>
-                        </li>
-                        <li><a href="index.html">订单处理</a>
-                        </li>
-                        <li><a href="index.html">配货订单</a>
+                        <li><a href="Customer">交易订单</a>
                         </li>
                         </li>
                     </ul>
@@ -122,9 +118,7 @@
                     <a href="webim.html"><i class="fa fa-comments"></i> <span class="nav-label">客户通讯</span><span
                             class="label label-danger pull-right">New</span></a>
                 </li>
-
             </ul>
-
         </div>
     </nav>
 
@@ -233,16 +227,16 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-sm-4">
-                <h2>客户管理</h2>
+                <h2>订单管理</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index.html">主页</a>
                     </li>
                     <li>
-                        <a href="user.html"><strong>客户管理</strong></a>
+                        <a href="user.html"><strong>订单管理</strong></a>
                     </li>
                     <li>
-                        <strong>修改客户信息</strong>
+                        <strong>修改订单信息</strong>
                     </li>
                 </ol>
             </div>
@@ -257,18 +251,18 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="col-sm-4 control-label is-required">客户名称：</label>
+                            <label class="col-sm-4 control-label is-required">交易金额：</label>
                             <div class="col-sm-8">
-                                <input name="cnam" placeholder="请输入客户名称" value="${user.cnam}" class="form-control"  type="text" maxlength="30" required="" aria-required="true">
+                                <input name="cnam" placeholder="请输入交易金额" value="${user.cnam}" class="form-control"  type="text" maxlength="30" required="" aria-required="true">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="col-sm-4 control-label is-required">地址：</label>
+                            <label class="col-sm-4 control-label is-required">交易数量：</label>
                             <div class="col-sm-8">
-                                <input name="cadd"  placeholder="请输入地址" type="text" value="${user.cadd}"  class="form-control email"  maxlength="20"required="" aria-required="true">
+                                <input name="cadd"  placeholder="请输入交易数量" type="text" value="${user.cadd}"  class="form-control email"  maxlength="20"required="" aria-required="true">
                             </div>
                         </div>
                     </div>
@@ -277,16 +271,16 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="col-sm-4 control-label is-required">负责人：</label>
+                            <label class="col-sm-4 control-label is-required">交易状态：</label>
                             <div class="col-sm-8">
-                                <input name="cpeo" placeholder="请输入负责人" value="${user.cpeo}" class="form-control" type="text" maxlength="30" required="" aria-required="true">
+                                <input name="cpeo" placeholder="请输入交易状态" value="${user.cpeo}" class="form-control" type="text" maxlength="30" required="" aria-required="true">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="col-sm-4 control-label is-required">手机号码：</label>
+                            <label class="col-sm-4 control-label is-required">下单手机号：</label>
                             <div class="col-sm-8">
                                 <input id="ctel" name="ctel" placeholder="请输入手机号码" value="${user.ctel}" class="form-control" type="text" maxlength="11" required="" aria-required="true">
                             </div>
@@ -297,9 +291,9 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="col-sm-4 control-label is-required">邮箱：</label>
+                            <label class="col-sm-4 control-label is-required">交易时间：</label>
                             <div class="col-sm-8">
-                                <input  name="cmai" placeholder="请输入邮箱" value="${user.cmai}" class="form-control email" type="text" maxlength="20"  required="" aria-required="true">
+                                <input  name="cmai" placeholder="请输入交易时间" value="${user.cmai}" class="form-control email" type="text" maxlength="20"  required="" aria-required="true">
                             </div>
                         </div>
                     </div>

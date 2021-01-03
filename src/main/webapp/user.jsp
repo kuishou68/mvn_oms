@@ -82,24 +82,19 @@
 
 
                 <li>
-                    <a href="index.html#"><i class="fa fa-edit"></i> <span class="nav-label">订单管理</span><span
+                    <a href="Customer"><i class="fa fa-edit"></i> <span class="nav-label">订单管理</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="index.html">交易订单</a>
-                        </li>
-                        <li><a href="index.html">订单处理</a>
-                        </li>
-                        <li><a href="index.html">配货订单</a>
-                        </li>
+                        <li><a href="Customer">交易订单</a>
                         </li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="Customer"><i class="fa fa-user-secret"></i> <span class="nav-label">客户管理</span><span
+                    <a href=""><i class="fa fa-user-secret"></i> <span class="nav-label">客户管理</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="Customer">客户基本信息</a>
+                        <li><a href="">客户基本信息</a>
                         </li>
                     </ul>
                 </li>

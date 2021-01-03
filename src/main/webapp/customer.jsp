@@ -81,15 +81,10 @@
 
 
                 <li>
-                    <a href="index.html#"><i class="fa fa-edit"></i> <span class="nav-label">订单管理</span><span
+                    <a href="Customer"><i class="fa fa-edit"></i> <span class="nav-label">订单管理</span><span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="index.html">交易订单</a>
-                        </li>
-                        <li><a href="index.html">订单处理</a>
-                        </li>
-                        <li><a href="index.html">配货订单</a>
-                        </li>
+                        <li><a href="Customer">交易订单</a>
                         </li>
                     </ul>
                 </li>
@@ -248,13 +243,13 @@
 
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-sm-4">
-                <h2>客户管理</h2>
+                <h2>订单管理</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index.html">主页</a>
                     </li>
                     <li>
-                        <strong>客户管理</strong>
+                        <strong>订单管理</strong>
                     </li>
                 </ol>
             </div>
@@ -267,13 +262,13 @@
                 <div class="select-list">
                     <ul>
                         <li>
-                            客户名称：<input type="text" name="Cnam">
+                            订单编号：<input type="text" name="Cnam">
                         </li>
                         <li>
-                            公司地址：<input type="text" name="Cadd">
+                            交易金额：<input type="text" name="Cadd">
                         </li>
                         <li>
-                            负责人：<input type="text" name="Cpeo">
+                            交易时间：<input type="text" name="Cpeo">
                         </li>
                         <li>
                             电话：<input type="text" name="Ctel">
@@ -305,7 +300,7 @@
                                 <i class="fa fa-remove"></i> 删除
                             </a>
                             <a class="btn btn-info" onclick="$.table.importExcel()">
-                                <i class="fa fa-upload"></i> 导入
+                                <i class="fa fa-upload"></i> 审核
                             </a>
                             <a class="btn btn-warning" onclick="$.table.exportExcel()">
                                 <i class="fa fa-download"></i> 导出
@@ -325,18 +320,18 @@
                                     class="caret"></span></button>
                             <ul class="dropdown-menu" role="menu">
                                 <li><label><input type="checkbox" data-field="userId" value="1" checked="checked">
-                                    客户ID</label></li>
+                                    订单编号</label></li>
                                 <li><label><input type="checkbox" data-field="loginName" value="2" checked="checked">
-                                    客户名称</label></li>
+                                    交易金额</label></li>
                                 <li><label><input type="checkbox" data-field="userName" value="3" checked="checked">
-                                    地址</label></li>
+                                    交易数量</label></li>
                                 <li><label><input type="checkbox" data-field="dept.deptName" value="4"
                                                   checked="checked">
-                                    负责人</label></li>
+                                    交易状态</label></li>
                                 <li><label><input type="checkbox" data-field="phonenumber" value="6" checked="checked">
-                                    手机</label></li>
+                                    下单手机号</label></li>
                                 <li><label><input type="checkbox" data-field="email" value="5">
-                                    邮箱</label></li>
+                                    交易时间</label></li>
                                 <li><label><input type="checkbox" data-field="9" value="9" checked="checked"> 操作</label>
                                 </li>
                             </ul>
@@ -359,27 +354,27 @@
                                     <div class="fht-cell"></div>
                                 </th>
                                 <th style="" data-field="userId" name="Cid" tabindex="0">
-                                    <div class="th-inner " name="">客户ID</div>
+                                    <div class="th-inner " name="">订单编号</div>
                                     <div class="fht-cell"></div>
                                 </th>
                                 <th style="" data-field="userName" name="Cnam" tabindex="0">
-                                    <div class="th-inner ">客户名称</div>
+                                    <div class="th-inner ">交易金额</div>
                                     <div class="fht-cell"></div>
                                 </th>
                                 <th style="text-align: center; " data-field="7" name="Cadd" tabindex="0">
-                                    <div class="th-inner ">地址</div>
+                                    <div class="th-inner ">交易数量</div>
                                     <div class="fht-cell"></div>
                                 </th>
                                 <th style="" data-field="nick_name" name="Cpeo" tabindex="0">
-                                    <div class="th-inner ">负责人</div>
+                                    <div class="th-inner ">交易状态</div>
                                     <div class="fht-cell"></div>
                                 </th>
                                 <th style="" data-field="phoneNumber" name="Ctel" tabindex="0">
-                                    <div class="th-inner ">手机</div>
+                                    <div class="th-inner ">下单手机号</div>
                                     <div class="fht-cell"></div>
                                 </th>
                                 <th style="" data-field="dept.deptName" name="Cmai" tabindex="0">
-                                    <div class="th-inner ">邮箱</div>
+                                    <div class="th-inner ">交易时间</div>
                                     <div class="fht-cell"></div>
                                 </th>
                                 <th style="text-align: center; " data-field="9" tabindex="0">
@@ -409,8 +404,8 @@
                                             ${user.cadd}
                                         <div class="fht-cell"></div>
                                     </td>
-                                    <td style="" data-field="createTime" name="ctel" tabindex="0">
-                                            ${user.cadd}
+                                    <td style="" data-field="createTime" name="cpeo" tabindex="0">
+                                            ${user.cpeo}
                                         <div class="fht-ctel"></div>
                                     </td>
                                     <td style="" data-field="phoneNumber" name="ctel" tabindex="0">
